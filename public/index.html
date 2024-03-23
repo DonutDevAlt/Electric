@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="referrer" content="no-referrer" />
+		<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home</title>
+		<link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+		<link rel="stylesheet" href="assets/styles/main.css" />
+		<script src="assets/scripts/auth.js"></script>
+	</head>
+
+	<body>
+		<div id="particles-js"></div>
+		<script type="text/javascript" src="assets/particles/particles.js"></script>
+		<script type="text/javascript" src="assets/particles/app.js"></script>
+		<script>
+			//const tab = window.open("about:blank", "_blank");
+			let inFrame;
+
+			try {
+				inFrame = window !== top;
+			} catch (e) {
+				inFrame = true;
+			}
+
+			if (!inFrame) {
+				if (!tab || tab.closed) {
+					alert("Allow popups and redirects... or I'm in your walls...");
+				} else {
+					//ab();
+					//window.location.replace("https://classroom.google.com/h");
+				}
+			}
+
+			function ab() {
+				const iframe = tab.document.createElement("iframe");
+				const stl = iframe.style;
+				stl.border = stl.outline = "none";
+				stl.width = "100vw";
+				stl.height = "100vh";
+				stl.position = "fixed";
+				stl.left = stl.right = stl.top = stl.bottom = "0";
+				iframe.src = self.location;
+				tab.document.body.appendChild(iframe);
+			}
+		</script>
+
+		<h1>Electric <span id="blue">BETA</span></h1>
+
+		<h1 id="splash">Splash</h1>
+
+		<form method="POST" id="f">
+			<input
+				id="i"
+				class="main-search"
+				placeholder="Search with Google or enter address"
+				type="text" />
+		</form>
+
+		<div id="proxySelect">
+			<select id="proxy">
+				<option value="inter">Interviolet</option>
+				<option value="dynamic">Dynamic</option>
+			</select>
+		</div>
+
+		<script id="index" src="./index.js"></script>
+		<script src="./assets/scripts/splash.js"></script>
+		<script id="bundle" src="./m/bundle.js"></script>
+		<script id="config" src="./m/config.js"></script>
+		<script src="./assets/scripts/proxy.js"></script>
+
+		<script>
+			var iframe = document.createElement("iframe");
+
+			document.addEventListener("keydown", (event) => {
+				if (event.keyCode === 192) {
+					iframe.src = "calc.html";
+					iframe.style =
+						"position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; border: none; background-color: white;";
+					document.body.appendChild(iframe);
+					iframe.id = "iframe";
+
+					iframe.onload = () => {
+						iframe.contentWindow.document.addEventListener(
+							"keydown",
+							(event) => {
+								if (event.keyCode === 192) {
+									document.body.removeChild(iframe);
+								}
+							}
+						);
+					};
+				}
+			});
+		</script>
+	</body>
+</html>

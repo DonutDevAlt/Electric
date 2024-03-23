@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+	<title>Please Login</title>
+	<link rel="stylesheet" href="assets/styles/auth.css" />
+</head>
+
+<body>
+	<div id="auth">
+		<h1>Please Login to use the Acedemic Calculator</h1>
+		<h2>
+			The Acedemic Calculator is a free Javascript-based calculator tool for
+			students. Use it today!
+		</h2>
+
+		<input type="text" class="username" placeholder="Username" />
+		<input type="text" class="password" placeholder="Password" />
+
+		<button class="b" id="b">Login</button>
+		<button class="l" id="l">Use as Guest</button>
+	</div>
+
+	<script>
+		l = document.getElementById("l");
+
+		l.onclick = function () {
+			window.location.href = "https://acedemic-calculator.surge.sh";
+		};
+        
+        b = document.getElementById("b");
+        
+        b.onclick = function () {
+            if(document.getElementsByClassName("username")[0].value == "admin" && document.getElementsByClassName("password")[0].value == "thegreensk1b1d1toiletatemycatandd1ed"){
+                localStorage.setItem("auth", "true");
+                window.location.href = "calc.html";
+            }
+        }
+	</script>
+</body>
