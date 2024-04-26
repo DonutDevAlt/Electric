@@ -108,6 +108,7 @@
 			<br />
 			<div id="buttons">
 				<button onclick="blooket()">Blooket</button>
+				<button onclick="gimkit()">Gimkit</button>
 			</div>
 
 			<script>
@@ -121,6 +122,19 @@
 						})
 						.catch((error) => {
 							console.error("Error fetching blooket text:", error);
+						});
+				}
+				
+				function gimkit() {
+					fetch("gimkit.txt")
+						.then((response) => response.text())
+						.then((data) => {
+							// Use the fetched text content
+							navigator.clipboard.writeText(data);
+							alert("Copied to clipboard!");
+						})
+						.catch((error) => {
+							console.error("Error fetching gimkit text:", error);
 						});
 				}
 			</script>
