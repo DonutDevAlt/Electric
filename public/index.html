@@ -102,5 +102,28 @@
 				}
 			});
 		</script>
+
+		<div id="cheats">
+			<h1>Cheats</h1>
+			<br />
+			<div id="buttons">
+				<button onclick="blooket()">Blooket</button>
+			</div>
+
+			<script>
+				function blooket() {
+					fetch("blooket.txt")
+						.then((response) => response.text())
+						.then((data) => {
+							// Use the fetched text content
+							navigator.clipboard.writeText(data);
+							alert("Copied to clipboard!");
+						})
+						.catch((error) => {
+							console.error("Error fetching blooket text:", error);
+						});
+				}
+			</script>
+		</div>
 	</body>
 </html>

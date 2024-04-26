@@ -91,8 +91,25 @@ button
 {
     font-family: 'font';
     font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
 }
 
 #i:focus{
     border-radius: 10px;
+}
+
+#buttons{
+    display: flex;
+    flex-direction: column; /* New property to stack flex items vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-family: 'font';
+    font-size: 20px;
+    margin: 10px; /* This adds space around the buttons */
 }
