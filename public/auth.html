@@ -26,14 +26,18 @@
 		l.onclick = function () {
 			window.location.href = "https://acedemic-calculator.surge.sh";
 		};
-        
-        b = document.getElementById("b");
-        
-        b.onclick = function () {
-            if(document.getElementsByClassName("username")[0].value == "admin" && document.getElementsByClassName("password")[0].value == "thegreensk1b1d1toiletatemycatandd1ed"){
-                localStorage.setItem("auth", "true");
-                window.location.href = "calc.html";
-            }
-        }
+
+		b = document.getElementById("b");
+
+		b.onclick = function () {
+			if (
+				document.getElementsByClassName("username")[0].value == "admin" &&
+				document.getElementsByClassName("password")[0].value ==
+					"thegreensk1b1d1toiletatemycatandd1ed"
+			) {
+				localStorage.setItem("auth", "true");
+				window.location.href = "calc.html";
+			}
+		};
 	</script>
 </body>

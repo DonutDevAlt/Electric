@@ -1,115 +1,129 @@
-:root{
-    --primary: rgb(0, 0, 0);
-    --secondary: rgb(255, 255, 255);
-    --font: rgb(255, 255, 255);
-    --trans: rgb(133, 133, 133);
+:root {
+	--primary: rgb(0, 0, 0);
+	--secondary: rgb(255, 255, 255);
+	--font: rgb(255, 255, 255);
+	--trans: rgb(133, 133, 133);
 }
 
 @font-face {
-    font-family: "font";
-    src: url('../fonts/font.otf');
+	font-family: "font";
+	src: url("../fonts/font.otf");
 }
 
-body{
-    background-color: var(--primary);
-    margin: 0;
-    padding: 0;
+body {
+	background-color: var(--primary);
+	margin: 0;
+	padding: 0;
 }
 
+#searchSelect {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
 
+#searchType {
+	color: var(--primary);
+	width: 200px;
+	height: 70px;
+	border: none;
+	border-radius: 10px;
+	font-family: "font";
+	text-align: center;
+	font-size: 26px;
+}
 
 #proxySelect {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
 }
 
-#proxy{
-    color: var(--primary);
-    width: 200px;
-    height: 70px;
-    border: none;
-    border-radius: 10px;
-    font-family: 'font';
-    text-align: center;
-    font-size: 26px;
+#proxy {
+	color: var(--primary);
+	width: 200px;
+	height: 70px;
+	border: none;
+	border-radius: 10px;
+	font-family: "font";
+	text-align: center;
+	font-size: 26px;
 }
 
 h1 {
-    font-size: 50px;
-    font-family: "font";
-    color: var(--font);
-    text-align: center;
+	font-size: 50px;
+	font-family: "font";
+	color: var(--font);
+	text-align: center;
 }
 
 #splash {
-    font-size: 25px;
-    font-family: "font";
-    color: var(--font);
-    text-align: center;
+	font-size: 25px;
+	font-family: "font";
+	color: var(--font);
+	text-align: center;
 }
 
-#f{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    color: var(--font);
+#f {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	color: var(--font);
 }
 
-#i{
-    width: 50%;
-    height: 70px;
-    color: var(--primary);
-    font-family: 'font';
-    border: none;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 20px;
-    transition: border-radius 0.5s ease;
+#i {
+	width: 50%;
+	height: 70px;
+	color: var(--primary);
+	font-family: "font";
+	border: none;
+	border-radius: 20px;
+	text-align: center;
+	font-size: 20px;
+	transition: border-radius 0.5s ease;
 }
 
-#particles-js{
-    height: 99%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+#particles-js {
+	height: 99%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
 
-#blue{
-    font-size: 50px;
-    font-family: "font";
-    color: rgb(0, 140, 255);
-    text-align: center;
-    text-shadow: 0px 0px 5px rgb(0, 191, 255);
-}
-
-
-button
-{
-    font-family: 'font';
-    font-size: 20px;
-    border: none;
-    border-radius: 10px;
-    width: 250px;
-    height: 50px;
-}
-
-#i:focus{
-    border-radius: 10px;
-}
-
-#buttons{
-    display: flex;
-    flex-direction: column; /* New property to stack flex items vertically */
-    justify-content: center;
-    align-items: center;
+#blue {
+	font-size: 50px;
+	font-family: "font";
+	color: rgb(0, 140, 255);
+	text-align: center;
+	text-shadow: 0px 0px 5px rgb(0, 191, 255);
 }
 
 button {
-    font-family: 'font';
-    font-size: 20px;
-    margin: 10px; /* This adds space around the buttons */
+	font-family: "font";
+	font-size: 20px;
+	border: none;
+	border-radius: 10px;
+	width: 250px;
+	height: 50px;
+}
+
+#i:focus {
+	border-radius: 10px;
+}
+
+#buttons {
+	display: flex;
+	flex-direction: column; /* New property to stack flex items vertically */
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+	font-family: "font";
+	font-size: 20px;
+	margin: 10px; /* This adds space around the buttons */
 }

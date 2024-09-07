@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("dy") == "false") {
         p.options[0].selected = true;
     }
-    
+
     selected = p.options[p.selectedIndex].value;
     if (selected == "inter") {
         localStorage.setItem("dy", "false");
@@ -26,5 +26,35 @@ p.addEventListener("change", function () {
     }
     if (selected == "dynamic") {
         localStorage.setItem("dy", "true");
+    }
+})
+
+var lT = document.getElementById("searchType");
+var lTValue = lT.options[lT.selectedIndex].value;
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("load") == "true") {
+        lT.options[1].selected = true;
+    }
+    if (localStorage.getItem("load") == "false") {
+        lT.options[0].selected = true;
+    }
+
+    selected = lT.options[lT.selectedIndex].value;
+    if (selected == "load") {
+        localStorage.setItem("load", "true");
+    }
+    if (selected == "direct") {
+        localStorage.setItem("load", "false");
+    }
+})
+
+lT.addEventListener("change", function () {
+    selected = p.options[p.selectedIndex].value;
+    if (selected == "load") {
+        localStorage.setItem("load", "true");
+    }
+    if (selected == "direct") {
+        localStorage.setItem("load", "false");
     }
 })

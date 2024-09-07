@@ -31,8 +31,13 @@ function processUrl(value) {
 	if (dy === "true") {
 		window.location.href = "/a/q/" + __uv$config.encodeUrl(url);
 	} else {
-		sessionStorage.setItem("GoUrl","/a/" + __uv$config.encodeUrl(url));
-		window.location.href = "load.html";
+		if (localStorage.getItem("load") == "true") {
+			sessionStorage.setItem("GoUrl", "/a/" + __uv$config.encodeUrl(url));
+			window.location.href = "load.html";
+		}
+		else {
+			window.location.href = "/a/" + __uv$config.encodeUrl(url);
+		}
 	}
 }
 
