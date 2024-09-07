@@ -127,3 +127,7 @@ button {
 	font-size: 20px;
 	margin: 10px; /* This adds space around the buttons */
 }
+
+.header {
+	background-color: var(--primary);
+}
