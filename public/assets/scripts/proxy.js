@@ -1,6 +1,7 @@
 var p = document.getElementById("proxy");
-
 var selected = p.options[p.selectedIndex].value;
+var lT = document.getElementById("searchType");
+var lTValue = lT.options[lT.selectedIndex].value;
 
 document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("dy") == "true") {
@@ -17,22 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (selected == "dynamic") {
         localStorage.setItem("dy", "true");
     }
-})
 
-p.addEventListener("change", function () {
-    selected = p.options[p.selectedIndex].value;
-    if (selected == "inter") {
-        localStorage.setItem("dy", "false");
-    }
-    if (selected == "dynamic") {
-        localStorage.setItem("dy", "true");
-    }
-})
-
-var lT = document.getElementById("searchType");
-var lTValue = lT.options[lT.selectedIndex].value;
-
-document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("load") == "true") {
         lT.options[1].selected = true;
     }
@@ -47,10 +33,22 @@ document.addEventListener("DOMContentLoaded", function () {
     if (selected == "direct") {
         localStorage.setItem("load", "false");
     }
+
 })
 
-lT.addEventListener("change", function () {
+p.addEventListener("change", function () {
     selected = p.options[p.selectedIndex].value;
+    if (selected == "inter") {
+        localStorage.setItem("dy", "false");
+    }
+    if (selected == "dynamic") {
+        localStorage.setItem("dy", "true");
+    }
+})
+
+
+lT.addEventListener("change", function () {
+    selected = lT.options[lT.selectedIndex].value;
     if (selected == "load") {
         localStorage.setItem("load", "true");
     }
