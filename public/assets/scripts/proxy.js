@@ -1,6 +1,7 @@
 var p = document.getElementById("proxy");
 var selected = p.options[p.selectedIndex].value;
 var lT = document.getElementById("searchType");
+var lTselected = lT.options[lT.selectedIndex].value;
 var lTValue = lT.options[lT.selectedIndex].value;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -18,19 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
     if (selected == "dynamic") {
         localStorage.setItem("dy", "true");
     }
-
+    //breakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
     if (localStorage.getItem("load") == "true") {
-        lT.options[1].selected = true;
-    }
-    if (localStorage.getItem("load") == "false") {
         lT.options[0].selected = true;
     }
+    if (localStorage.getItem("load") == "false") {
+        lT.options[1].selected = true;
+    }
 
-    selected = lT.options[lT.selectedIndex].value;
-    if (selected == "load") {
+    lTselected = lT.options[lT.selectedIndex].value;
+    if (lTselected == "load") {
         localStorage.setItem("load", "true");
     }
-    if (selected == "direct") {
+    if (lTselected == "direct") {
         localStorage.setItem("load", "false");
     }
 
