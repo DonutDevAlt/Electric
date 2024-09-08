@@ -17,25 +17,35 @@ body {
 }
 
 .settings-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px; /* Remove gap between the divs */
-    margin-top: 20px;
-    width: 100%; /* Ensure full width */
-    max-width: 950px; /* Adjust as needed */
-    margin-left: auto;
-    margin-right: auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 10px;
+	/* Remove gap between the divs */
+	margin-top: 20px;
+	width: 100%;
+	/* Ensure full width */
+	max-width: 950px;
+	/* Adjust as needed */
+	margin-left: auto;
+	margin-right: auto;
 }
 
-#proxySelect, #searchSelect {
-    flex: 100;
-    max-width: 70%; /* Each takes up half the container width */
-    padding: 10px 10px; /* Add some padding inside each div */
-    box-sizing: border-box; /* Include padding in width calculation */
+#proxySelect,
+#searchSelect,
+#cloakSelect {
+	flex: 100;
+	max-width: 70%;
+	/* Each takes up half the container width */
+	padding: 10px 10px;
+	/* Add some padding inside each div */
+	box-sizing: border-box;
+	/* Include padding in width calculation */
 	background-color: rgb(0, 153, 255);
 	border-radius: 30px;
 }
+
+
 
 
 #searchSelect {
@@ -45,6 +55,28 @@ body {
 	align-items: center;
 	margin-top: 0px;
 	margin: auto;
+	box-shadow: rgb(0, 115, 255) 0px 0px 1000px;
+}
+
+#cloakSelect {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0px;
+	margin: auto;
+	box-shadow: rgb(0, 115, 255) 0px 0px 1000px;
+}
+
+#cloakType {
+	color: var(--primary);
+	width: 200px;
+	height: 70px;
+	border: none;
+	border-radius: 10px;
+	font-family: "font";
+	text-align: center;
+	font-size: 26px;
 }
 
 #searchType {
@@ -56,6 +88,7 @@ body {
 	font-family: "font";
 	text-align: center;
 	font-size: 26px;
+	box-shadow: rgb(0, 115, 255) 0px 0px 1000px;
 }
 
 #proxySelect {
@@ -64,6 +97,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin: auto;
+	box-shadow: rgb(0, 115, 255) 0px 0px 1000px;
 }
 
 #proxy {
@@ -107,7 +141,7 @@ h1 {
 	border-radius: 20px;
 	text-align: center;
 	font-size: 20px;
-	transition: border-radius 0.5s ease;
+	transition: border-radius 0.5s ease, box-shadow 0.5s ease;
 }
 
 #particles-js {
@@ -142,15 +176,26 @@ button {
 	border-radius: 10px;
 	width: 250px;
 	height: 50px;
+	box-shadow: rgb(255, 255, 255) 0px 0px 100px;
+	transition: box-shadow 0.5s ease, background-color 0.25s ease, width 0.25s ease;
+
+}
+
+button:hover {
+	box-shadow: rgb(0, 191, 255) 0px 0px 100px;
+	background-color: rgb(0, 140, 255);
+	width: 270px;
 }
 
 #i:focus {
 	border-radius: 10px;
+	box-shadow: rgb(0, 191, 255) 0px 0px 100px;
 }
 
 #buttons {
 	display: flex;
-	flex-direction: column; /* New property to stack flex items vertically */
+	flex-direction: column;
+	/* New property to stack flex items vertically */
 	justify-content: center;
 	align-items: center;
 }
@@ -158,7 +203,8 @@ button {
 button {
 	font-family: "font";
 	font-size: 20px;
-	margin: 10px; /* This adds space around the buttons */
+	margin: 10px;
+	/* This adds space around the buttons */
 }
 
 #header {
@@ -168,7 +214,8 @@ button {
 	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
-	margin: 20px auto; /* Increased the top margin to 20px */
+	margin: 20px auto;
+	/* Increased the top margin to 20px */
 	box-shadow: 0px 0px 10px var(--secondary);
 }
 

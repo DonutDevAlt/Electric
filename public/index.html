@@ -47,9 +47,11 @@
 
 		// Check if the tab is already open
 		if (localStorage.getItem("dy") != "true") {
-			if (window.name !== "tabOpened") {
+			if (window.name != "tabOpened") {
 				window.name = "tabOpened";
-				//openTab();
+				if (localStorage.getItem("ab") == "true") {
+					openTab();
+				}
 			}
 		}
 	</script>

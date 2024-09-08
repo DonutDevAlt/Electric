@@ -2,7 +2,8 @@ var p = document.getElementById("proxy");
 var selected = p.options[p.selectedIndex].value;
 var lT = document.getElementById("searchType");
 var lTselected = lT.options[lT.selectedIndex].value;
-var lTValue = lT.options[lT.selectedIndex].value;
+var cT = document.getElementById("cloakType");
+var cTselected = cT.options[cT.selectedIndex].value;
 
 document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("dy") == "true") {
@@ -34,7 +35,21 @@ document.addEventListener("DOMContentLoaded", function () {
     if (lTselected == "direct") {
         localStorage.setItem("load", "false");
     }
+    //breakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+    if (localStorage.getItem("ab") == "true") {
+        cT.options[0].selected = true;
+    }
+    if (localStorage.getItem("ab") == "false") {
+        cT.options[1].selected = true;
+    }
 
+    cTselected = cT.options[cT.selectedIndex].value;
+    if (cTselected == "ab") {
+        localStorage.setItem("ab", "true");
+    }
+    if (cTselected == "none") {
+        localStorage.setItem("ab", "false");
+    }
 })
 
 p.addEventListener("change", function () {
@@ -49,11 +64,21 @@ p.addEventListener("change", function () {
 
 
 lT.addEventListener("change", function () {
-    selected = lT.options[lT.selectedIndex].value;
-    if (selected == "load") {
+    lTselected = lT.options[lT.selectedIndex].value;
+    if (lTselected == "load") {
         localStorage.setItem("load", "true");
     }
-    if (selected == "direct") {
+    if (lTselected == "direct") {
         localStorage.setItem("load", "false");
+    }
+})
+
+cT.addEventListener("change", function () {
+    cTselected = cT.options[cT.selectedIndex].value;
+    if (cTselected == "ab") {
+        localStorage.setItem("ab", "true");
+    }
+    if (cTselected == "none") {
+        localStorage.setItem("ab", "false");
     }
 })
