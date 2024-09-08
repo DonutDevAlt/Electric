@@ -16,43 +16,6 @@
 	<div id="particles-js"></div>
 	<script type="text/javascript" src="assets/particles/particles.js"></script>
 	<script type="text/javascript" src="assets/particles/app.js"></script>
-	<script>
-		function inIframe() {
-			try {
-				return window.self !== window.top;
-			} catch (e) {
-				return true;
-			}
-		}
-
-		function openTab() {
-			if (!inIframe()) {
-				const tab = window.open("about:blank", "_blank");
-				if (!tab || tab.closed) {
-					alert("Allow popups and redirects... or I'm in your walls...");
-				} else {
-					const iframe = tab.document.createElement("iframe");
-					const stl = iframe.style;
-					stl.border = stl.outline = "none";
-					stl.width = "100vw";
-					stl.height = "100vh";
-					stl.position = "fixed";
-					stl.left = stl.right = stl.top = stl.bottom = "0";
-					iframe.src = self.location;
-					tab.document.body.appendChild(iframe);
-					window.location.replace("https://classroom.google.com/h");
-				}
-			}
-		}
-
-		// Check if the tab is already open
-		if (localStorage.getItem("dy") != "true") {
-			if (window.name !== "tabOpened") {
-				window.name = "tabOpened";
-				//openTab();
-			}
-		}
-	</script>
 
 	<header id="header">
 		<span id="logo" class="logo">ELECTRIC</span></h1>
@@ -63,20 +26,28 @@
 		</nav>
 	</header>
 
-	<h1>Electric <span id="blue">2.0</span></h1>
+	<h1><span id="bigblue">Settings</span></h1>
+	<div class="settings-container">
+		<div id="proxySelect">
+			<h1>Proxy Engine</h1>
+			<select id="proxy">
+				<option value="inter">Interviolet</option>
+				<option value="dynamic">Dynamic</option>
+			</select>
+		</div>
 
-	<h1 id="splash">Splash</h1>
+		<div id="searchSelect">
+			<h1>Search Preference</h1>
+			<select id="searchType">
+				<option value="load">Load</option>
+				<option value="direct">Direct</option>
+			</select>
+		</div>
+	</div>
 
-	<form method="POST" id="f">
-		<input id="i" class="main-search" placeholder="Search with Google or enter address" type="text" />
-	</form>
 
 
-	<script id="index" src="./index.js"></script>
-	<script src="./assets/scripts/splash.js"></script>
-	<script id="bundle" src="./m/bundle.js"></script>
-	<script id="config" src="./m/config.js"></script>
-
+	<script src="./assets/scripts/proxy.js"></script>
 
 	<script>
 		var iframe = document.createElement("iframe");
@@ -102,7 +73,6 @@
 			}
 		});
 	</script>
-
 
 </body>
 
