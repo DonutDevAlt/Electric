@@ -1,0 +1,22 @@
+{
+    "games": [
+        {
+            "id": "fn",
+            "name": "Fortnite",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_lettermark_logo.png",
+            "link": "https://play.geforcenow.com/games?game-id=46bfab06-d864-465d-9e56-2d9e45cdee0a&lang=en_US&asset-id=01_a49f2653-e1a4-4d6f-88fb-14e46aef1b8f"
+        },
+        {
+            "id": "btdb2",
+            "name": "BTD Battles 2",
+            "icon": "https://static.wikia.nocookie.net/b__/images/7/7a/BTDB2.png/revision/latest?cb=20240225144415&path-prefix=bloons",
+            "link": "https://play.geforcenow.com/games?game-id=d3b8fd6f-cad3-4779-94c3-b4617714de0c&lang=en_US&asset-id=01_4ec603c9-981d-494f-8837-491c23acfd51"
+        },
+        {
+            "id": "ss",
+            "name": "Shell Shockers",
+            "icon": "https://cdn-images.threadless.com/~tms/bluewizard/products/1617669/original-1621960642-2ac607f273a319bd81ac2f36de28fac5.png?v=3&d=g6NvcHOWk6R0cmltksLCgJOmcmVzaXplkIOld2lkdGjLQI8gAAAAAACmaGVpZ2h0y0CPIAAAAAAAqGFsbG93X3VwwpOvY2FudmFzX2NlbnRlcmVkks0EsM0EsIGqYmFja2dyb3VuZKZmZmZmZmaTpnJlc2l6ZZHNAyCAk69jYW52YXNfY2VudGVyZWSTzQMgzQMgpyNmZmZmZmaAk6ZlbmNvZGWSo2pwZ1WApWZvcmNlwqlvbmx5X21ldGHC&f=mp",
+            "link": "https://www.crazygames.com/game/shellshockersio"
+        }
+    ]
+}

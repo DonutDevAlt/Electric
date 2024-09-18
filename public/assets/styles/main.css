@@ -200,10 +200,30 @@ button:hover {
 	align-items: center;
 }
 
+#gamebuttons {
+	display: flex;
+	flex-direction: column;
+	/* New property to stack flex items vertically */
+	justify-content: center;
+}
+
 button {
 	font-family: "font";
 	font-size: 20px;
 	margin: 10px;
+	/* This adds space around the buttons */
+}
+
+gamebutton {
+	display: flex;
+	font-family: "font";
+	font-size: 20px;
+	margin: 10px;
+	width: 200px;
+	height: 150px;
+	align-items: center;
+	background-color: wheat;
+
 	/* This adds space around the buttons */
 }
 
@@ -220,7 +240,7 @@ button {
 }
 
 .logo {
-	margin-right: 450px;
+	margin-right: 300px;
 	font-size: 55px;
 	font-family: "font";
 	color: rgb(0, 140, 255);
